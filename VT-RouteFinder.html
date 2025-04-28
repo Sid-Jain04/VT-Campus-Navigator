@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VT Campus Navigator</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="vt-style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search for a building..." />
+      <select id="filterType">
+        <option value="all">All Types</option>
+        <option value="academic">Academic</option>
+        <option value="dorm">Dorm</option>
+        <option value="dining">Dining</option>
+        <option value="admin">Administrative</option>
+      </select>
+      <select id="fromSelect"><option value="">From...</option></select>
+      <select id="toSelect"><option value="">To...</option></select>
+      <button onclick="calculateRoute()">Show Route</button>
+      <button onclick="clearRoute()">Clear Route</button>
+    </div>
+  </div>
+  
+  <!-- Now outside the container -->
+  <div id="map"></div>
+  <div id="landmarkPreview" class="landmark-preview-container" style="display: none;">
+    <h3>Landmarks Along the Way</h3>
+    <div id="landmarkCards" class="landmark-cards"></div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

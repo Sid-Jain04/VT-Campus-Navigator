@@ -1,0 +1,138 @@
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2b2b2b; /* darker background */
+    color: #fff;
+  }
+  
+/* Main Container */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  background-color: #2e2e2e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+  
+  
+  
+  /* Updated Map Styling */
+  #map {
+    height: 60vh;
+    width: 95%;
+    max-width: 960px;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    border: 2px solid #fc0000;
+  }
+  @media (max-width: 768px) {
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    #map {
+      width: 95%;
+      height: 400px;
+    }
+  
+    .landmark-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  
+  
+  /* UI Controls */
+  .controls {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+  }
+  
+  /* Input Styling */
+  .controls input,
+  .controls select,
+  .controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #4d4a49;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .controls input::placeholder {
+    color: #ccc;
+  }
+  
+  .controls button {
+    background-color: #e44608;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background-color: #ff6a2d;
+    transform: scale(1.03);
+  }
+  
+  .leaflet-routing-container {
+    background-color: #2c2b2b;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    max-width: 350px;
+  }
+  
+  .landmark-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .landmark-card {
+    background-color: #4d4a49;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .landmark-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .landmark-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 200px;
+  }
+  
+  .landmark-card h4,
+  .landmark-card p {
+    margin: 0.5rem 0;
+    color: #fff;
+  }
+  
